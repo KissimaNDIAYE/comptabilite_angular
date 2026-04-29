@@ -3,7 +3,7 @@ import { AddProduitComponent } from './add-produit/add-produit.component';
 import { CategorieComponent } from './categorie/categorie.component';
 import { AddCategorieComponent } from './add-categorie/add-categorie.component';
 import { UpdateCategorieComponent } from './update-categorie/update-categorie.component';
-// import { TypeImpotComponent } from './type-impot/type-impot.component';
+import { TypeImpotComponent } from './type-impot/type-impot.component';
 // import { AddTypeImpotComponent } from './add-type-impot/add-type-impot.component';
 // import { UpdateTypeImpotComponent } from './update-type-impot/update-type-impot.component';
 // import { UpdateTypeBudgetComponent } from './update-type-budget/update-type-budget.component';
@@ -15,7 +15,7 @@ export const routes: Routes = [
     {path: "add-categorie", component : AddCategorieComponent},
     {path: "updateCategorie/:id", component: UpdateCategorieComponent},
 
-    // {path: "type_impots", component : TypeImpotComponent},
+    {path: "type_impots", component : TypeImpotComponent},
     // {path: "add-type_impots", component : AddTypeImpotComponent},
     // {path: "updateType_Impot/:id", component: UpdateTypeImpotComponent},
 
