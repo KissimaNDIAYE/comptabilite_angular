@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <tr>
+                    <th>Id</th>
+                    <th>Description</th>
+                </tr> 
+                @for (type_budget of type_budgets; track type_budget.idType_Budget) { <tbody>
+                    <tr>
+                        <td>{{type_budget.idType_Budget}}</td>
+                        <td>{{type_budget.budgetTypeDesc}}</td>
+                        <td><a class="btn btn-danger" (click)="supprimerType_Budget(type_budget)">Supprimer</a></td> 
+                        <td><a class="btn btn-success" [routerLink]="['/updateType_Budget', type_budget.idType_Budget]">Modifier</a></td>
+                    </tr>
+                </tbody> } 
+            </table>  
+        </div> 
+    </div>
+</div>

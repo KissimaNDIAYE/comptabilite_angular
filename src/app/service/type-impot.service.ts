@@ -14,7 +14,7 @@ const httpOptions = {
 export class TypeImpotService {
   // URL de l'API backend pour récupérer la liste des types d'impôt
   apiURL: string = 'http://localhost:8080/comptabilite/api/type_impot/allType_Impots';
-  apiURL1: string = 'http://localhost:8080/comptabilite/api/type_impot'; 
+  baseApiURL: string = 'http://localhost:8080/comptabilite/api/type_impot'; 
 
   //un objet de Type_Impot
   type_impot! : Type_Impot;
@@ -34,24 +34,24 @@ export class TypeImpotService {
   ajouterType_Impot(typeImpot: Type_Impot): Observable<Type_Impot> {
     // Envoie une requête POST vers le backend avec l'objet typeImpot
     // Retourne un Observable contenant la réponse du serveur
-    return this.http.post<Type_Impot>(this.apiURL1, typeImpot, httpOptions);
+    return this.http.post<Type_Impot>(this.baseApiURL, typeImpot, httpOptions);
   }
 
   // Méthode pour supprimer un Type_Impot dans la base de données
   supprimerType_Impot(id: number) {
-    const url = `${this.apiURL1}/${id}`;
+    const url = `${this.baseApiURL}/${id}`;
     return this.http.delete(url, httpOptions);
   }
 
   // Méthode pour consulter un Type_Impot dans la base de données
   consulterType_Impot(id: number): Observable<Type_Impot> { 
-    const url = `${this.apiURL1}/${id}`; 
+    const url = `${this.baseApiURL}/${id}`; 
     return this.http.get<Type_Impot>(url); 
   } 
 
   // Méthode pour modifier un Type_Impot dans la base de données
   updateType_Impot(c: Type_Impot): Observable<Type_Impot> {
-    return this.http.put<Type_Impot>(this.apiURL1, c, httpOptions);
+    return this.http.put<Type_Impot>(`${this.baseApiURL}/${c.idType_Impot}`, c, httpOptions);
   }
 
 }

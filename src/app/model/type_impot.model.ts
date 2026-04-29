@@ -1,5 +1,3 @@
-import { Categorie } from "./categorie.model";
-
 // Déclaration de la classe Type_Impot (modèle côté frontend)
 export class Type_Impot {
 

@@ -1,0 +1,36 @@
+<div class="container">
+
+  <div>
+    <h2>Modifier un Type_Impot :</h2>
+  </div>
+
+  <!-- Utilisation correcte du submit Angular -->
+  <form>
+
+    <!-- ID (désactivé) -->
+    <div class="col-sm-2 col-md-2 col-lg-2"> 
+      <label>ID Type_Impot</label> 
+      <input type="number" [(ngModel)]="currentType_Impot.idType_Impot" name="idType_Impot" class="form-control" disabled>
+    </div>
+
+    <!-- Description -->
+    <div class="col-sm-4 col-md-4 col-lg-4"> 
+      <label>Type_Impot</label> 
+      <input type="text" [(ngModel)]="currentType_Impot.typeImpotDesc" name="typeImpotDesc" class="form-control" required >
+    </div> 
+
+    <!-- Bouton -->
+    <div class="mt-2"> 
+      <button type="submit" (click)="updateType_Impot()" class="btn btn-success">
+        Modifier
+      </button> 
+    </div>
+
+    <!-- Message -->
+    <div class="mt-2">
+      <h3>{{message}}</h3>
+    </div>
+
+  </form>
+
+</div>
