@@ -9,6 +9,4 @@ export class Type_Impot {
   // Description du type d'impôt (libellé)
   typeImpotDesc?: string;
 
-  // Objet catégorie associé (relation ManyToOne côté backend)
-  categorie! : Categorie;
 }
